@@ -1,0 +1,10 @@
+[{
+    "crypto": "Ethereum",
+    "amount": 999
+}, {
+    "crypto": "Litecoin",
+    "amount": 999
+}, {
+    "crypto": "Bitcoin",
+    "amount": 1312
+}]

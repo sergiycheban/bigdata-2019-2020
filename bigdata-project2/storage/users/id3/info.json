@@ -1,0 +1,21 @@
+[{
+        "crypto": "Ethereum",
+        "amount": 999
+    }, {
+        "crypto": "Litecoin",
+        "amount": 399
+    }, {
+        "crypto": "Bitcoin",
+        "amount": 123
+    },
+    {
+        "crypto": "Tether",
+        "amount": 132
+    }, {
+        "crypto": "Bitcoin Cash",
+        "amount": 12
+    }, {
+        "crypto": "Ripple",
+        "amount": 12
+    }
+]
