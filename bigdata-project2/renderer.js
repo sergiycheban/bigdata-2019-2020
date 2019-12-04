@@ -108,8 +108,8 @@ function sendAmoutToUser(sender, recipient, crypto, amout) {
 
 
     let fileRecipient = "./storage/users/" + recipient + "/info.json";
-    let recipientInfoObj = fs.readFileSync(fileSender);
-    let recipientInfo = JSON.parse(senderInfoObj);
+    let recipientInfoObj = fs.readFileSync(fileRecipient);
+    let recipientInfo = JSON.parse(recipientInfoObj);
     // senderInfo[0].amout = 300;
 
     isHaveCrypto = false;
@@ -141,8 +141,7 @@ function sendAmoutToUser(sender, recipient, crypto, amout) {
             }
         }
     }
-    if( ! isHaveCrypto )
-    {
+    if (!isHaveCrypto) {
         alert("You have no such currency");
     }
     console.log(senderInfo);
