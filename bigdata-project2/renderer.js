@@ -112,9 +112,11 @@ function sendAmoutToUser(sender, recipient, crypto, amout) {
     let recipientInfo = JSON.parse(senderInfoObj);
     // senderInfo[0].amout = 300;
 
+    isHaveCrypto = false;
     for (let index = 0; index < senderInfo.length; index++) {
         const obj = senderInfo[index];
         if (crypto == obj.crypto) {
+            isHaveCrypto = true;
             if (obj.amount >= amout) {
                 senderInfo[index].amount = obj.amount - amout;
                 fs.writeFileSync(fileSender, JSON.stringify(senderInfo));
@@ -138,6 +140,10 @@ function sendAmoutToUser(sender, recipient, crypto, amout) {
                 alert("Not enough money on the balance sheet");
             }
         }
+    }
+    if( ! isHaveCrypto )
+    {
+        alert("You have no such currency");
     }
     console.log(senderInfo);
 }
